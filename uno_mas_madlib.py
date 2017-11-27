@@ -47,12 +47,6 @@ def check_answers(answer):
                 return answer
 
 def game_instructions(madlib_level, blanks, answers):
-    """
-    As the game proceeds, this function finds blanks, prompts user input, converting the madlib_level
-    string into a list. Correct answers are put into a new list along with the non-blank words, joining
-    them to reform a string to print out; if user is incorrect after 3 attempts, func prints out answers
-    within the madlib_level to continue game.
-    """
     print madlib_level
     replaced = []
     madlib_level = madlib_level.split()
@@ -73,13 +67,7 @@ def game_instructions(madlib_level, blanks, answers):
             phrase = " ".join(replaced)
 
 def game_intro():
-    """
-    Prompts user to select a level difficulty, then calls on game_instructions to set up the madlib and
-    answers associated with that level. Prompts user to try again if they do not select a valid level.
-    """
-    print '\n'+ "Welcome to the Mad Hatter's Madlib Game!" + '\n'
-    print "Fill in the blanks with lyrics from me Mad Hatter's favorite Beatles' songs!" + '\n'
-    print "Answers are case sensitive, and you have 3 attempts per blank! Good luck!!" + '\n'
+    print '\n'+ "Fill in the blanks with lyrics from me Mad Hatter's favorite Beatles' songs! Good luck!" + '\n'
     select_level_difficulty = False
     while select_level_difficulty == False:
         user_input = raw_input("Please select a level -- easy, medium or hard: ").lower()
