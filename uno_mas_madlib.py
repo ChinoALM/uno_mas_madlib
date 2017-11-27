@@ -46,7 +46,7 @@ def check_answers(answer):
                 print "The correct answer is " + answer + "."
                 return answer
 
-def game_instructions(madlib_level, blanks, answers):
+def game_instructions(madlib_level, blanks, answers): #prompts user input, passes thru madlib_level string.
     print madlib_level
     replaced = []
     madlib_level = madlib_level.split()
@@ -66,7 +66,7 @@ def game_instructions(madlib_level, blanks, answers):
             replaced.append(word)
             phrase = " ".join(replaced)
 
-def game_intro():
+def game_intro(): #Asks the user to input a difficulty level and loads that levels data.
     print '\n'+ "Fill in the blanks with lyrics from me Mad Hatter's favorite Beatles' songs! Good luck!" + '\n'
     select_level_difficulty = False
     while select_level_difficulty == False:
