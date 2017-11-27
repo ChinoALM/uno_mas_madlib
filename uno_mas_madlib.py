@@ -11,3 +11,14 @@ hard_madlib = """There is nothing __1__ can do that cant be done. Nothing you ca
 cant be __3__ . Nothing you can say but you can __4__ how to play the game. Its __5__ . All you
 need is love."""
 hard_answers = ['you', 'sing', 'sung', 'learn', 'easy']
+
+def fill_in_blanks(word, blanks):
+    """
+    Searches madlib for blanks by comparing word to blanks list using (word, blanks) as inputs and
+    outputs a blank or None. Func given to us from the madlib class materials.
+    """
+    for blank in blanks:
+        if blank in word:
+            return blank
+    return None
+
