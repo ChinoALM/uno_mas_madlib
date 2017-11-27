@@ -74,7 +74,28 @@ def game_instructions(madlib_level, blanks, answers):
 
 def game_intro():
     """
-    Prompts user to select a level difficulty, then calls on the game_instructions function
-    to set up the appropriate madlib and answers associated with that level.
-    asks user to try again if a subject from the list is not selected
+    Prompts user to select a level difficulty, then calls on game_instructions to set up the madlib and
+    answers associated with that level. Prompts user to try again if they do not select a valid level.
     """
+    print '\n'+ "Welcome to the Mad Hatter's Madlib Game!" + '\n'
+    print "Fill in the blanks with lyrics from me Mad Hatter's favorite Beatles' songs!" + '\n'
+    print "Answers are case sensitive, and you have 3 attempts per blank! Good luck!!" + '\n'
+    select_level_difficulty = False
+    while select_level_difficulty == False:
+        user_input = raw_input("Please select a level -- easy, medium or hard: ").lower()
+        if user_input == "easy":
+            print "You selected easy."
+            select_level_difficulty = True
+            game_instructions(easy_madlib, blanks, easy_answers)
+        elif user_input == "medium":
+            print "You selected medium."
+            select_level_difficulty = True
+            game_instructions(medium_madlib, blanks, medium_answers)
+        elif user_input == "hard":
+            print "You selected hard."
+            select_level_difficulty = True
+            game_instructions(hard_madlib, blanks, hard_answers)
+        else:
+            print "You selected an invalid level. Please select easy, medium, or hard."
+
+
