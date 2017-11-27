@@ -98,4 +98,5 @@ def game_intro():
         else:
             print "You selected an invalid level. Please select easy, medium, or hard."
 
-
+game_intro() #func runs madlib
+raw_input("Thanks for playing! Hit return to exit:")
